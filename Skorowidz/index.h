@@ -13,10 +13,8 @@ typedef struct {
     Slowo* pierwsze;
 } Indeks;
 
-// Funkcje
 void inicjalizujIndeks(Indeks* indeks);
 void dodajSlowo(Indeks* indeks, const char* tekst, int numer);
-void drukujStrony(Slowo* s);
 void wypiszIndeks(const Indeks* indeks);
 void zwolnijIndeks(Indeks* indeks);
 
