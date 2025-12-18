@@ -13,18 +13,18 @@ int main() {
 
     do {
         printf("\n==== MENU SKOROWIDZU ====\n");
-        printf("1. Dodaj s³owo z numerem strony\n");
-        printf("2. Wyœwietl indeks\n");
-        printf("3. Zakoñcz\n");
-        printf("Wybierz opcjê: ");
+        printf("1. Dodaj slowo z numerem strony\n");
+        printf("2. Wyswietl indeks\n");
+        printf("0. Zakoncz\n");
+        printf("Wybierz opcje: ");
         if (scanf("%d", &opcja) != 1) {
-            while (getchar() != '\n'); // czyszczenie bufora
+            while (getchar() != '\n'); 
             continue;
         }
 
         switch (opcja) {
         case 1:
-            printf("Podaj s³owo: ");
+            printf("Podaj slowo: ");
             scanf("%s", slowo);
             printf("Podaj numer strony: ");
             scanf("%d", &strona);
@@ -35,13 +35,13 @@ int main() {
             printf("\n==== SKOROWIDZ ====\n");
             wypiszIndeks(&indeks);
             break;
-        case 3:
+        case 0:
             printf("Koniec programu.\n");
             break;
         default:
             printf("Niepoprawna opcja!\n");
         }
-    } while (opcja != 3);
+    } while (opcja != 0);
 
     zwolnijIndeks(&indeks);
     return 0;
