@@ -12,13 +12,9 @@ int main() {
     int strona;
 
     do {
-        printf("\n==== MENU SKOROWIDZU ====\n");
-        printf("1. Dodaj slowo z numerem strony\n");
-        printf("2. Wyswietl indeks\n");
-        printf("0. Zakoncz\n");
-        printf("Wybierz opcje: ");
+        printf("\n1. Dodaj slowo\n2. Wyswietl\n0. Koniec\nWybierz: ");
         if (scanf("%d", &opcja) != 1) {
-            while (getchar() != '\n'); 
+            while (getchar() != '\n');
             continue;
         }
 
@@ -26,20 +22,17 @@ int main() {
         case 1:
             printf("Podaj slowo: ");
             scanf("%s", slowo);
-            printf("Podaj numer strony: ");
+            printf("Podaj strone: ");
             scanf("%d", &strona);
             dodajSlowo(&indeks, slowo, strona);
-            printf("Dodano!\n");
             break;
         case 2:
-            printf("\n==== SKOROWIDZ ====\n");
             wypiszIndeks(&indeks);
             break;
         case 0:
-            printf("Koniec programu.\n");
             break;
         default:
-            printf("Niepoprawna opcja!\n");
+            printf("Niepoprawna opcja\n");
         }
     } while (opcja != 0);
 
